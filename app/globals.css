@@ -38,6 +38,12 @@
 }
 
 @font-face {
+  font-family: 'Eudoxus Sans Regular';
+  src: url(../public/font/EudoxusSans-Regular.ttf);
+  font-weight: 300;
+}
+
+@font-face {
   font-family: 'Kenyan Coffe';
   src: url(../public/font/KenyanCoffeeRg-Regular.otf);
   font-weight: 500;
@@ -65,6 +71,10 @@
 
 .eudoxus-md-5{
   font-family: "Eudoxus Sans Medium";
+}
+
+.eudoxus-regular{
+  font-family: "Eudoxus Sans Regular";
 }
 
 .eudoxus-xbold{
@@ -101,4 +111,9 @@ html{
 
 .home-button:hover {
   color: #ffffff; 
+}
+
+.no-drag {
+  -webkit-user-drag: none; /* For WebKit browsers */
+  user-select: none; /* For non-WebKit browsers */
 }

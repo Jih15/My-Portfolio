@@ -6,6 +6,13 @@ const Home: React.FC = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: false });
 
+  const scrollToContact = () => {
+    const element = document.getElementById("id-contact");
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <section
       id="id-home"
@@ -46,7 +53,7 @@ const Home: React.FC = () => {
           animate={isInView ? { y: 0, opacity: 1 } : { y: 100, opacity: 0 }}
           transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
           type="button"
-          onClick={() => console.log("connect")}
+          onClick={scrollToContact}
           className="relative flex items-center justify-center mt-24 p-4 w-[12em] h-[3em] border border-white bg-transparent text-white overflow-hidden z-10 transition-colors duration-300 group home-button"
         >
           Let&rsquo;s Connect! <ChevronRight size={20} />
