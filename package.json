@@ -13,6 +13,7 @@
     "react-dom": "^18",
     "next": "14.2.7",
     "heroicons/react@v2": "^2.0.13",
+    "heroicons/react@v1": "^1.0.13",
     "framer-motion": "^8.0.0",
     "react-bootstrap-icons": "^1.0.0"
   },
