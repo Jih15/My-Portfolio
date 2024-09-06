@@ -18,7 +18,7 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-##Features
+## Features
 
 - Framer Motion: For animations and transitions. See [`Framer Motion`](https://www.framer.com/motion/introduction/) to read documentations
 - React Bootstrap Icons: For a collection of icons that can be used across your project. See the [`React Bootstrap Icons documentation`](https://icons.getbootstrap.com/) for more information.
