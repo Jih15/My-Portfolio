@@ -141,8 +141,8 @@ html{
 }
 
 .no-drag {
-  -webkit-user-drag: none; /* For WebKit browsers */
-  user-select: none; /* For non-WebKit browsers */
+  -webkit-user-drag: none; 
+  user-select: none; 
 }
 
 .focus-gradient:focus {
