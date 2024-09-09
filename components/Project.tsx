@@ -4,8 +4,7 @@ const Project: React.FC = () => {
   return (
     <section
       id="id-project"
-      className="relative w-full h-screen bg-cover bg-center bg-no-repeat"
-      style={{backgroundImage: "url(/img/projectbanner.jpg)"}}
+      className="relative w-full h-screen bg-cover bg-white bg-center bg-no-repeat"
     >
         
 
