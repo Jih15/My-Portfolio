@@ -19,7 +19,7 @@ const Page: React.FC = () => {
       if (footerElement) {
         const rect = footerElement.getBoundingClientRect();
         const isFooterVisible = rect.top <= window.innerHeight && rect.bottom >= 0;
-        setIsNavbarVisible(!isFooterVisible); 
+        setIsNavbarVisible(!isFooterVisible);
       }
     };
 
@@ -31,7 +31,7 @@ const Page: React.FC = () => {
   }, []);
 
   return (
-    <div className="relative w-full h-full overflow-x-hidden">
+    <div className="relative w-full min-h-screen overflow-x-hidden custom-scrollbar">
       {/* Header */}
       <NewHeader />
 
