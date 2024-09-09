@@ -13,27 +13,23 @@ const Project: React.FC = () => {
     if (section) {
       const container = section.querySelector(".flex");
       if (container) {
-        // Menghitung lebar total konten
         const containerWidth = container.scrollWidth;
         const viewportWidth = window.innerWidth;
 
-        // Set lebar section sesuai dengan lebar total konten
         gsap.set(section, { width: containerWidth });
 
         gsap.to(container, {
-          x: () => -(containerWidth - viewportWidth), // Geser konten horizontal dari kiri ke kanan
+          x: () => -(containerWidth - viewportWidth), 
           ease: "linear",
           scrollTrigger: {
             trigger: section,
-            start: "top top", // Mulai animasi saat bagian atas section berada di bagian atas viewport
-            end: () => "+=" + (containerWidth - viewportWidth + 1000), // Durasi scroll horizontal
-            scrub: 1, // Sinkronisasi animasi dengan scroll
-            pin: true, // Menjepit section selama animasi
-            anticipatePin: 1 // Mengantisipasi pinning untuk kelancaran animasi
+            start: "top top", 
+            end: () => "+=" + (containerWidth - viewportWidth + 1000), 
+            scrub: 1, 
+            pin: true, 
+            anticipatePin: 1 
           }
         });
-
-        // Hapus whitespace di kanan jika ada
         gsap.set(container, { overflowX: 'hidden' });
       }
     }
