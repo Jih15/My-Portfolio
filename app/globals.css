@@ -118,6 +118,28 @@ html{
   color: #ffffff; 
 }
 
+/* CV Button */
+
+.cv-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background-color: #2067b9; 
+  transition: transform 0.4s ease-in-out; 
+  z-index: -1; 
+}
+
+.cv-button:hover::before {
+  transform: translateX(100%); 
+}
+
+.cv-button:hover {
+  color: #ffffff; 
+}
+
 .no-drag {
   -webkit-user-drag: none; /* For WebKit browsers */
   user-select: none; /* For non-WebKit browsers */

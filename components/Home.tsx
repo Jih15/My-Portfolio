@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 import { motion, useInView } from "framer-motion";
-import { ChevronRight } from "react-bootstrap-icons";
+import { ChevronRight, Download } from "react-bootstrap-icons";
 
 const Home: React.FC = () => {
   const ref = useRef(null);
@@ -12,6 +12,14 @@ const Home: React.FC = () => {
       element.scrollIntoView({ behavior: "smooth" });
     }
   };
+
+  const downloadCV = () => {
+    const link = document.createElement('a');
+    link.href = '/doc/CV_Zaqaul Fikri Aziz (2024) - EN.pdf'; 
+    link.download = 'CV_Zaqaul Fikri Aziz (2024) - EN.pdf'; 
+    link.click();
+  };
+
 
   return (
     <section
@@ -48,16 +56,29 @@ const Home: React.FC = () => {
           </motion.div>
         </div>
 
-        <motion.button
-          initial={{ y: 100, opacity: 0 }}
-          animate={isInView ? { y: 0, opacity: 1 } : { y: 100, opacity: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
-          type="button"
-          onClick={scrollToContact}
-          className="relative flex items-center justify-center mt-24 p-4 w-[12em] h-[3em] border border-white bg-transparent text-white overflow-hidden z-10 transition-colors duration-300 group home-button"
-        >
-          Let&rsquo;s Connect! <ChevronRight size={20} />
-        </motion.button>
+        <div className="flex w-auto h-auto space-x-3 mt-24">
+          <motion.button
+            initial={{ y: 100, opacity: 0 }}
+            animate={isInView ? { y: 0, opacity: 1 } : { y: 100, opacity: 0 }}
+            transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+            type="button"
+            onClick={scrollToContact}
+            className="relative flex items-center justify-center p-4 w-[12em] h-[3em] border border-white bg-transparent text-white overflow-hidden z-10 transition-colors duration-300 group home-button"
+          >
+            Let&rsquo;s Connect! <ChevronRight size={20} />
+          </motion.button>
+          <motion.button
+            initial={{ y: 100, opacity: 0 }}
+            animate={isInView ? { y: 0, opacity: 1 } : { y: 100, opacity: 0 }}
+            transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+            type="button"
+            onClick={downloadCV}
+            className="relative flex items-center justify-center p-4 w-[5em] h-[3em] border border-white bg-transparent text-white overflow-hidden z-10 transition-colors duration-300 group cv-button"
+          >
+            CV <Download size={20} className="ml-2"/>
+          </motion.button>
+          
+        </div>
       </div>
     </section>
   );

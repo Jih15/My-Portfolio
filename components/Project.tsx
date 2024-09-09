@@ -19,23 +19,23 @@ const Project: React.FC = () => {
         gsap.set(section, { width: containerWidth });
 
         gsap.to(container, {
-          x: () => -(containerWidth - viewportWidth), 
+          x: () => -(containerWidth - viewportWidth),
           ease: "linear",
           scrollTrigger: {
             trigger: section,
-            start: "top top", 
-            end: () => "+=" + (containerWidth - viewportWidth + 1000), 
-            scrub: 1, 
-            pin: true, 
-            anticipatePin: 1 
-          }
+            start: "top top",
+            end: () => "+=" + (containerWidth - viewportWidth + 1000),
+            scrub: 1,
+            pin: true,
+            anticipatePin: 1,
+          },
         });
-        gsap.set(container, { overflowX: 'hidden' });
+        gsap.set(container, { overflowX: "hidden" });
       }
     }
 
     return () => {
-      ScrollTrigger.getAll().forEach(trigger => trigger.kill());
+      ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
     };
   }, []);
 
@@ -46,7 +46,9 @@ const Project: React.FC = () => {
       className="relative h-screen bg-cover bg-white p-[4.5rem]"
     >
       <div className="flex w-auto h-[100%] space-x-16">
-        <div className="item bg-yellow-100 w-[60rem] h-[100%] flex-shrink-0"></div>
+        <div className="item bg-slate-200 w-[60rem] h-[100%] flex-shrink-0 p-8">
+          <div className="w-full h-full bg-slate-50"></div>
+        </div>
         <div className="item bg-blue-200 w-[60rem] h-[100%] flex-shrink-0"></div>
         <div className="item bg-slate-400 w-[60rem] h-[100%] flex-shrink-0"></div>
         <div className="item bg-red-300 w-[60rem] h-[100%] flex-shrink-0"></div>
