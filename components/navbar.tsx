@@ -80,7 +80,7 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`fixed flex w-[22rem] h-[4rem] lg:w-[30rem] lg:h-[4.5rem] justify-center bg-[#103134] rounded-full lg:top-[88vh] top-[90vh] left-1/2 transform -translate-x-1/2 z-[9999] overflow-hidden shadow-[0_8px_18px_rgba(0,0,0,0.3)] transition-all duration-500 ${
+      className={`fixed flex w-[22rem] h-[4rem] lg:w-[30rem] lg:h-[4.5rem] justify-center bg-[#103134] rounded-full lg:top-[88vh] top-[85vh] left-1/2 transform -translate-x-1/2 z-[9999] overflow-hidden shadow-[0_8px_18px_rgba(0,0,0,0.3)] transition-all duration-500 ${
         isBottomOfPage ? "opacity-0" : "opacity-100"
       }`}
     >
