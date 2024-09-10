@@ -50,16 +50,16 @@ const NewHeader: React.FC = () => {
 
   return (
     <div
-      className={`fixed flex px-5 py-7 sm:p-9  w-full justify-between items-center z-20 transition-all duration-300 ease-in-out ${headerColor}`}
+      className={`fixed flex px-6 py-9 lg:px-9 lg:py-7  w-full justify-between items-center z-20 transition-all duration-300 ease-in-out ${headerColor}`}
     >
       <h1 className={`transition-all duration-300 ease-in-out ${headerColor}`}>
         <a href="#id-home" className="no-underline monumentExtended text-3xl">
           JIH
         </a>
       </h1>
-      <div className="flex transition-transform duration-500 ease-in-out">
+      <div className="flex transition-transform duration-500 space-x-5 ease-in-out">
         <motion.div
-          className="flex items-center justify-center w-8 h-8 mx-4 z-10"
+          className="flex items-center justify-center w-8 h-8 z-10"
           initial={{ opacity: 1, x: 0 }}
           animate={{ opacity: showIcons ? 1 : 0, x: showIcons ? 0 : -30 }}
           transition={{ duration: 0.3, ease: "easeInOut" }}
@@ -74,7 +74,7 @@ const NewHeader: React.FC = () => {
           </a>
         </motion.div>
         <motion.div
-          className="flex items-center justify-center w-8 h-8 mx-4 z-10"
+          className="flex items-center justify-center w-8 h-8 z-10"
           initial={{ opacity: 1, x: 0 }}
           animate={{ opacity: showIcons ? 1 : 0, x: showIcons ? 0 : -30 }}
           transition={{ duration: 0.3, ease: "easeInOut" }}

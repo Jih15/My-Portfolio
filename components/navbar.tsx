@@ -80,7 +80,7 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`fixed flex w-[500px] h-[70px] justify-center bg-[#103134] rounded-full top-[88vh] left-1/2 transform -translate-x-1/2 z-[9999] overflow-hidden shadow-[0_8px_18px_rgba(0,0,0,0.3)] transition-all duration-500 ${
+      className={`fixed flex w-[24rem] h-[4rem] lg:w-[30rem] lg:h-[4.5rem] justify-center bg-[#103134] rounded-full lg:top-[88vh] top-[91vh] left-1/2 transform -translate-x-1/2 z-[9999] overflow-hidden shadow-[0_8px_18px_rgba(0,0,0,0.3)] transition-all duration-500 ${
         isBottomOfPage ? "opacity-0" : "opacity-100"
       }`}
     >
@@ -93,7 +93,7 @@ const Navbar = () => {
           <li key={item.name} className="relative flex-1 text-center z-[1]">
             <a
               href={item.href}
-              className={`flex items-center justify-center text-white font-[300] text-[16px] px-4 py-2 rounded-full transition-all duration-300 ${
+              className={`flex items-center justify-center text-white font-[300] text-[0.8rem] lg:text-[16px]  px-4 py-2 rounded-full transition-all duration-300 ${
                 activeItem === item.name ? "font-semibold" : ""
               }`}
               onClick={() => handleNavClick(item.name)}
