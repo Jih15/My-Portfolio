@@ -14,19 +14,19 @@ const Footer: React.FC = () => {
   return (
     <section id="id-footer">
       <hr className="border-t border-gray-500 w-full my-0" />
-      <div className="flex items-center justify-between w-full h-[50vh] bg-black text-center p-10">
-        <div className="flex flex-col items-center justify-center flex-[0.3] h-full">
-          <p className="text-white monumentExtended text-6xl">
+      <div className="flex flex-col-reverse lg:flex-row items-center justify-between w-full h-[50vh] bg-black text-center p- ">
+        <div className="flex flex-col lg:items-center items-end justify-center lg:pl-0 pl-[17rem] flex-[0.3] h-full">
+          <p className="text-white monumentExtended text-4xl lg:text-6xl">
             <a href="#id-home">JIH</a>
           </p>
         </div>
         <div className="flex flex-col flex-[0.6] w-80 items-center justify-center h-full">
           <div>
-            <h1 className="text-white text-lg text-center eudoxus-regular mb-4">
+            <h1 className="text-white text-sm lg:text-lg text-center eudoxus-regular mb-4">
               Find Me At :
             </h1>
           </div>
-          <div className="flex w-96 justify-between mt-4 space-x-4">
+          <div className="flex w-96 justify-between mt-4 space-x-4 px-5">
             <motion.a
               href="https://web.facebook.com/zaqaulfikri.aziz/"
               target="_blank"
@@ -79,14 +79,14 @@ const Footer: React.FC = () => {
             alt=""
             src={Signature.zaqSignature}
             width={200}
-            className="w-full h-full object-cover no-drag"
+            className="w-60 h-auto mt-5 lg:mt-0 lg:w-full lg:h-full object-cover no-drag"
             onContextMenu={(e) => e.preventDefault()}
           />
           <div className="absolute inset-0 bg-black opacity-0 pointer-events-none"></div>{" "}
         </div>
       </div>
       <hr className="border-t border-gray-500 w-full my-0" />
-      <div className="flex bg-black py-5 px-32 w-full">
+      <div className="flex bg-black py-5 pl-5 lg:px-32 w-full">
         <motion.a
         href="#" 
         whileHover={{color: "#35C6D2"}}
