@@ -54,33 +54,33 @@ const Contact: React.FC = () => {
         <div
           className="
           lg:w-[50%] lg:h-[100%]
-          w-[100%] h-[100%]"
+          w-[100%] h-[100%] lg:space-y-0 space-y-1"
         >
-          <h1 className="text-white eudoxus-xbold text-contact-mobile lg:my-0 my-8 lg:text-[5rem]">
+          <h1 className="text-white eudoxus-xbold text-contact-mobile lg:my-0 my-8 lg:text-[5rem] lg:mb-4 mb-3">
             Let&rsquo;s <br />
             <span className="w-auto h-auto bg-white text-black">Connect!</span>
           </h1>
-          <div className="mb-2 lg:mb-4">
-            <h2 className="text-white generalSans-semibold text-[1.3rem] lg:text-[1.7rem]">
+          <div className="lg:mb-4">
+            <h2 className="text-white generalSans-semibold text-[1.1rem] lg:text-[1.7rem]">
               Mail
             </h2>
-            <p className="text-white generalSans-regular lg:text-lg text-[1rem]">
+            <p className="text-white generalSans-regular lg:text-lg text-[0.8rem]">
               zaqazaqaul@gmail.com
             </p>
           </div>
-          <div className="mb-4">
-            <h2 className="text-white generalSans-semibold text-[1.3rem] lg:text-[1.7rem]">
+          <div className="lg:mb-4">
+            <h2 className="text-white generalSans-semibold text-[1.1rem] lg:text-[1.7rem]">
               Address
             </h2>
-            <p className="text-white generalSans-regular lg:text-lg text-[1rem]">
+            <p className="text-white generalSans-regular lg:text-lg text-[0.8rem]">
               Padang, West Sumatera
             </p>
           </div>
-          <div className="mb-4">
-            <h2 className="text-white generalSans-semibold text-[1.3rem] lg:text-[1.7rem]">
+          <div className="lg:mb-4 mb-2">
+            <h2 className="text-white generalSans-semibold text-[1.1rem] lg:text-[1.7rem]">
               Contact
             </h2>
-            <p className="text-white generalSans-regular lg:text-lg text-[1rem]">
+            <p className="text-white generalSans-regular lg:text-lg text-[0.8rem]">
               +62 8238 4928 968
             </p>
           </div>
