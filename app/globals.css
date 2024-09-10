@@ -86,6 +86,11 @@
   line-height: 1.08;
 }
 
+.text-contact-mobile{
+  font-size: 3rem;
+  line-height: 1.1;
+}
+
 
 html{
   scroll-behavior: smooth;
@@ -171,4 +176,10 @@ html{
 
 .custom-scrollbar::-webkit-scrollbar-thumb:hover {
   background: #1D6167; /* Warna thumb saat di-hover */
+}
+
+/* Mobile */
+
+.text-h2mobile{
+  
 }

@@ -50,7 +50,7 @@ const NewHeader: React.FC = () => {
 
   return (
     <div
-      className={`fixed flex p-9 w-full justify-between items-center z-20 transition-all duration-300 ease-in-out ${headerColor}`}
+      className={`fixed flex px-5 py-7 sm:p-9  w-full justify-between items-center z-20 transition-all duration-300 ease-in-out ${headerColor}`}
     >
       <h1 className={`transition-all duration-300 ease-in-out ${headerColor}`}>
         <a href="#id-home" className="no-underline monumentExtended text-3xl">
