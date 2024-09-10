@@ -37,7 +37,7 @@ const Page: React.FC = () => {
 
       {/* Navbar */}
       <div
-        className={`fixed bottom-0 left-1/2 transform -translate-x-1/2 w-full transition-opacity duration-500 z-50 ${
+        className={`fixed top-0 left-0 w-full transition-opacity duration-500 z-50 ${
           isNavbarVisible ? "opacity-100" : "opacity-0"
         }`}
       >

@@ -13,7 +13,7 @@ const Navbar = () => {
   const [activeItem, setActiveItem] = useState("Home");
   const [activePosition, setActivePosition] = useState(0);
   const [activeWidth, setActiveWidth] = useState(0);
-  const [isBottomOfPage, setIsBottomOfPage] = useState(false);
+  const [isBottomOfPage, setIsBottomOfPage] = useState(false); // State to track bottom of the page
 
   const navItems = [
     { name: "Home", href: "#id-home", icon: <HomeIcon className="h-6 w-6" /> },
@@ -79,12 +79,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav
-      className={`fixed flex w-[22rem] h-[4rem] lg:w-[30rem] lg:h-[4.5rem] justify-center bg-[#103134] rounded-full lg:top-[88vh] top-[85vh] left-1/2 transform -translate-x-1/2 z-[9999] overflow-hidden shadow-[0_8px_18px_rgba(0,0,0,0.3)] transition-all duration-500 ${
-        isBottomOfPage ? "opacity-0" : "opacity-100"
-      }`}
-      style={{ position: 'fixed', bottom: 0 }} // Ensuring the navbar stays fixed at the bottom
-    >
+    <nav className="navbar-container">
       <div
         className="absolute top-1/2 transform -translate-y-1/2 bg-[#1d6167] h-[45px] rounded-full transition-all duration-300"
         style={{ left: `${activePosition}px`, width: `${activeWidth}px` }}
