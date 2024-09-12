@@ -182,19 +182,4 @@ html{
 
 /* Mobile */
 
-/* Navbar Style */
-.navbar-container {
-  position: fixed;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 100%; /* Atau ukuran tetap sesuai kebutuhan */
-  z-index: 9999; /* Pastikan navbar berada di atas elemen lainnya */
-}
 
-/* Mobile Specific */
-@media (max-width: 768px) {
-  .navbar-container {
-    /* Pastikan posisi dan transformasi sesuai di perangkat mobile */
-  }
-}

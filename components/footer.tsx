@@ -74,11 +74,11 @@ const Footer: React.FC = () => {
             </motion.a>
           </div>
         </div>
-        <div className="relative flex-[0.3]">
+        <div className="relative flex-[0.3] mr-4">
           <Image
             alt=""
             src={Signature.zaqSignature}
-            width={200}
+            width={180}
             className="w-60 h-auto mt-5 lg:mt-0 lg:w-full lg:h-full object-cover no-drag"
             onContextMenu={(e) => e.preventDefault()}
           />

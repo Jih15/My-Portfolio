@@ -80,12 +80,12 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`fixed bottom-8 left-1/2 transform -translate-x-1/2 flex lg:w-[35rem] w-full max-w-4xl h-16 bg-[#103134] rounded-full justify-center items-center z-[9999] overflow-hidden shadow-md transition-opacity duration-500 ${
+      className={`fixed bottom-8 left-1/2 transform -translate-x-1/2 flex lg:w-[35rem] w-[22rem] max-w-4xl h-16 bg-[#103134] rounded-full justify-center items-center z-[9999] overflow-hidden shadow-md transition-opacity duration-500 ${
         isBottomOfPage ? "opacity-0" : "opacity-100"
       }`}
     >
       <div
-        className="absolute top-1/2 transform -translate-y-1/2 bg-[#1d6167] h-[45px] rounded-full transition-all duration-300"
+        className="absolute top-1/2 transform -translate-y-1/2 bg-[#1d6167] h-[45px] w-full rounded-full transition-all duration-300"
         style={{ left: `${activePosition}px`, width: `${activeWidth}px` }}
       />
       <ul className="flex justify-around items-center w-full px-4 text-white">

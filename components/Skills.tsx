@@ -15,7 +15,7 @@ const skillsData = [
     description: "Deskripsi Dart...",
     rate: "88%",
     color: "bg-blue-400",
-    notHoverColor : "bg-dart"
+    notHoverColor: "bg-dart",
   },
   {
     name: "PHP",
@@ -25,7 +25,7 @@ const skillsData = [
     description: "Deskripsi PHP...",
     rate: "75%",
     color: "bg-red-500",
-    notHoverColor : "bg-php"
+    notHoverColor: "bg-php",
   },
   {
     name: "TypeScript",
@@ -35,7 +35,7 @@ const skillsData = [
     description: "Deskripsi TypeScript...",
     rate: "75%",
     color: "bg-gray-700",
-    notHoverColor : "bg-ts"
+    notHoverColor: "bg-ts",
   },
   {
     name: "Java",
@@ -45,7 +45,7 @@ const skillsData = [
     description: "Deskripsi Java...",
     rate: "65%",
     color: "bg-blue-300",
-    notHoverColor : "bg-java"
+    notHoverColor: "bg-java",
   },
   {
     name: "Figma",
@@ -55,13 +55,17 @@ const skillsData = [
     description: "Deskripsi Figma...",
     rate: "90%",
     color: "bg-black",
-    notHoverColor : "bg-figma"
+    notHoverColor: "bg-figma",
   },
 ];
 
 const getHeight = (index: number) => {
   const heights = ["h-5/6", "h-2/3", "h-3/4", "h-5/6", "h-full"];
   return heights[index % heights.length];
+};
+
+const getWidth = (isMobile: boolean) => {
+  return isMobile ? "w-full" : "w-auto";
 };
 
 const Skills: React.FC = () => {
@@ -81,7 +85,7 @@ const Skills: React.FC = () => {
   return (
     <section
       id="id-skill"
-      className="flex w-full h-screen bg-cover bg-center bg-no-repeat"
+      className="flex flex-col md:flex-row w-full h-screen bg-cover bg-center bg-no-repeat"
       style={{
         backgroundImage: "url(/img/skillbanner.jpg)",
       }}
@@ -97,14 +101,18 @@ const Skills: React.FC = () => {
         </motion.p>
       </div>
 
-      <div className="flex flex-[0.7] h-full justify-around items-start mr-12">
+      <div className="flex flex-col md:flex-row flex-[0.7] h-full justify-around items-start mr-12">
         {skillsData.map((skill, index) => {
           return (
             <motion.div
               key={index}
-              className={`relative ${skill.notHoverColor} shadow-lg flex items-center justify-start cursor-pointer mr-2 overflow-hidden ${getHeight(
+              className={`relative ${
+                skill.notHoverColor
+              } shadow-lg flex items-center justify-start cursor-pointer mr-2 overflow-hidden ${getHeight(
                 index
-              )} ${activeSkill === skill.name ? "flex-[2]" : "flex-1"}`}
+              )} ${getWidth(true)} ${
+                activeSkill === skill.name ? "flex-[2]" : "flex-1"
+              } md:${getWidth(false)}`}
               onHoverStart={() => setActiveSkill(skill.name)}
               onHoverEnd={() => setActiveSkill(null)}
               animate={{
@@ -125,7 +133,7 @@ const Skills: React.FC = () => {
                 <Image
                   src={skill.image}
                   alt={skill.name}
-                  className={`w-20 h-20 transition-all duration-150 ${
+                  className={`relative w-24 h-20 transition-all duration-150 ${
                     activeSkill === skill.name ? "scale-125" : "scale-100"
                   }`}
                 />
@@ -133,8 +141,8 @@ const Skills: React.FC = () => {
               {activeSkill === skill.name && (
                 <motion.div
                   className={`absolute bg-white inset-0 flex flex-col items-center justify-center text-center p-0`}
-                  initial={{ opacity: 0,}}
-                  animate={{ opacity: 1,}}
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
                   transition={{
                     duration: 0.5,
                     ease: "easeOut",
@@ -185,7 +193,17 @@ const Skills: React.FC = () => {
                     >
                       <h3 className="text-xl font-bold">{skill.fname}</h3>
                       <div className=" w-72 h-auto p-5 rounded-xl">
-                        <p className="text-left text-xs generalSans-regular">Proin feugiat varius condimentum. Nullam convallis augue nibh. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Ut faucibus diam sed porttitor dignissim. In sed diam est. Donec cursus posuere sapien, vulputate blandit sapien. Pellentesque ultricies, nibh in tristique pharetra, nibh enim ultricies lacus, ac vehicula elit magna vitae metus. Aliquam scelerisque consectetur molestie.</p>
+                        <p className="text-left text-xs generalSans-regular">
+                          Proin feugiat varius condimentum. Nullam convallis
+                          augue nibh. Pellentesque habitant morbi tristique
+                          senectus et netus et malesuada fames ac turpis
+                          egestas. Ut faucibus diam sed porttitor dignissim. In
+                          sed diam est. Donec cursus posuere sapien, vulputate
+                          blandit sapien. Pellentesque ultricies, nibh in
+                          tristique pharetra, nibh enim ultricies lacus, ac
+                          vehicula elit magna vitae metus. Aliquam scelerisque
+                          consectetur molestie.
+                        </p>
                       </div>
                     </motion.div>
                   </div>
