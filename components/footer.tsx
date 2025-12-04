@@ -14,16 +14,20 @@ const Footer: React.FC = () => {
   return (
     <section id="id-footer">
       <hr className="border-t border-gray-500 w-full my-0" />
-      <div className="flex flex-col-reverse lg:flex-row items-center justify-between w-full h-[50vh] bg-black text-center p- ">
-        <div className="flex flex-col lg:items-center items-end justify-center lg:pl-0 pl-[17rem] flex-[0.3] h-full">
-          <p className="text-white monumentExtended text-4xl lg:text-6xl">
-            <a href="#id-home">JIH</a>
-          </p>
+      <div className="flex flex-col-reverse lg:flex-row items-center justify-between w-full h-[50vh] bg-black text-center p-16">
+        <div className="relative flex-[0.5]">
+          <Image
+            alt="Jih"
+            src={Signature.zaqSignature}
+            className=" lg:w-80 lg:h-full object-cover no-drag"
+            onContextMenu={(e) => e.preventDefault()}
+          />
+          <div className="absolute inset-0 bg-black opacity-0 pointer-events-none"></div>{" "}
         </div>
-        <div className="flex flex-col flex-[0.6] w-80 items-center justify-center h-full">
+        <div className="flex flex-col flex-[0.5] w-80 items-center justify-center h-full">
           <div>
-            <h1 className="text-white text-sm lg:text-lg text-center eudoxus-regular mb-4">
-              Find Me At :
+            <h1 className="text-white text-sm lg:text-lg text-center montserrat-medium mb-4">
+              Find me at :
             </h1>
           </div>
           <div className="flex w-96 justify-between mt-4 space-x-4 px-5">
@@ -64,7 +68,7 @@ const Footer: React.FC = () => {
               <Google size={35} />
             </motion.a>
             <motion.a
-              href="https://www.linkedin.com/in/zaqaul-fikri-aziz-4b0a81270/"
+              href="https://www.linkedin.com/in/zaqaul-fikri-aziz"
               target="_blank"
               rel="noopener noreferrer"
               whileHover={{ scale: 1.2, color: "#0077B5" }}
@@ -74,15 +78,12 @@ const Footer: React.FC = () => {
             </motion.a>
           </div>
         </div>
-        <div className="relative flex-[0.3] mr-4">
-          <Image
-            alt=""
-            src={Signature.zaqSignature}
-            width={180}
-            className="w-60 h-auto mt-5 lg:mt-0 lg:w-full lg:h-full object-cover no-drag"
-            onContextMenu={(e) => e.preventDefault()}
-          />
-          <div className="absolute inset-0 bg-black opacity-0 pointer-events-none"></div>{" "}
+        <div className="flex flex-col lg:items-end items-end justify-center lg:pl-0 pl-[17rem] flex-[0.5] h-full">
+          {/* <p className="text-white monumentExtended text-4xl lg:text-6xl">
+            <a href="#id-home">JIH</a>
+          </p> */}
+          <h1 className="text-white montserrat-bold text-5xl mb-1">Zaqaul Fikri Aziz</h1>
+          <p className="text-black bg-white montserrat-medium p-1">Web/Mobile Developer | UI/UX Designer</p>
         </div>
       </div>
       <hr className="border-t border-gray-500 w-full my-0" />
