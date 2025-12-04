@@ -1,4 +1,4 @@
-import zaqSignature from "@/public/img/signatureNew.svg"
+import zaqSignature from "@/public/img/signature.svg"
 
 const Signature = {
     zaqSignature

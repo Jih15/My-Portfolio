@@ -49,6 +49,18 @@
   font-weight: 500;
 }
 
+@font-face {
+  font-family: 'Montserrat';
+  src: url(../public/font/Montserrat-Bold.ttf);
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: 'Montserrat Medium';
+  src: url(../public/font/Montserrat-Medium.ttf);
+  font-weight: 500;
+}
+
 .monumentExtended{
   font-family: "Monument Extended";
 }
@@ -79,6 +91,14 @@
 
 .eudoxus-xbold{
   font-family: "Eudoxus Sans Extrabold";
+}
+
+.montserrat-bold{
+  font-family: "Montserrat";
+}
+
+.montserrat-medium{
+  font-family: "Montserrat Medium";
 }
 
 .text-contact{
